@@ -4,13 +4,6 @@ from datetime import time
 from box import detect_number_plate 
 conn=sqlite3.connect('Parking.db')
 c=conn.cursor()
-c.execute("""CREATE TABLE IF NOT EXISTS ParkingSystem(
-Vehicle_number TEXT,
-Entry_Time TIME,
-Exit_Time TIME,
-Duration Integer,
-Amount Integer
-)""")
 choice=0
 while(choice<5):
     print("\n\nPlease select your choice:\n1. Vehicle Entry\n2. Vehicle Exit\n3. Show Database\n4. Exit")
